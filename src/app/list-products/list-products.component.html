@@ -1,0 +1,8 @@
+<h2>Liste des produits</h2>
+<ul>
+  <li *ngFor="let product of listProducts">
+    {{ product.libelle }} - {{ product.prixunitaire }} €
+    <button (click)="calculateNumberOfProducts(product.libelle)">Calculer</button>
+    <span *ngIf="product.libelle === selectedLibelle">Nombre de produits : {{ numberOfProducts }}</span>
+  </li>
+</ul>
